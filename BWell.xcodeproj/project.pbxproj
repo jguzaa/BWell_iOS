@@ -9,23 +9,27 @@
 /* Begin PBXBuildFile section */
 		13A401A726D32D61001FA799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401A626D32D61001FA799 /* AppDelegate.swift */; };
 		13A401A926D32D61001FA799 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401A826D32D61001FA799 /* SceneDelegate.swift */; };
-		13A401AB26D32D61001FA799 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401AA26D32D61001FA799 /* ViewController.swift */; };
+		13A401AB26D32D61001FA799 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401AA26D32D61001FA799 /* HomeViewController.swift */; };
 		13A401AE26D32D61001FA799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A401AC26D32D61001FA799 /* Main.storyboard */; };
 		13A401B126D32D61001FA799 /* BWell.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13A401AF26D32D61001FA799 /* BWell.xcdatamodeld */; };
 		13A401B326D32D62001FA799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A401B226D32D62001FA799 /* Assets.xcassets */; };
 		13A401B626D32D62001FA799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A401B426D32D62001FA799 /* LaunchScreen.storyboard */; };
+		13A401C126D330DA001FA799 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401C026D330DA001FA799 /* AccountViewController.swift */; };
+		13A401C426D330F1001FA799 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401C326D330F1001FA799 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13A401A326D32D61001FA799 /* BWell.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BWell.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13A401A626D32D61001FA799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A401A826D32D61001FA799 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		13A401AA26D32D61001FA799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13A401AA26D32D61001FA799 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		13A401AD26D32D61001FA799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13A401B026D32D61001FA799 /* BWell.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BWell.xcdatamodel; sourceTree = "<group>"; };
 		13A401B226D32D62001FA799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13A401B526D32D62001FA799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13A401B726D32D62001FA799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13A401C026D330DA001FA799 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		13A401C326D330F1001FA799 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +64,40 @@
 			children = (
 				13A401A626D32D61001FA799 /* AppDelegate.swift */,
 				13A401A826D32D61001FA799 /* SceneDelegate.swift */,
-				13A401AA26D32D61001FA799 /* ViewController.swift */,
-				13A401AC26D32D61001FA799 /* Main.storyboard */,
+				13A401BF26D32DEF001FA799 /* Models */,
+				13A401BD26D32DD9001FA799 /* View */,
+				13A401BE26D32DE5001FA799 /* Controllers */,
 				13A401B226D32D62001FA799 /* Assets.xcassets */,
 				13A401B426D32D62001FA799 /* LaunchScreen.storyboard */,
 				13A401B726D32D62001FA799 /* Info.plist */,
 				13A401AF26D32D61001FA799 /* BWell.xcdatamodeld */,
 			);
 			path = BWell;
+			sourceTree = "<group>";
+		};
+		13A401BD26D32DD9001FA799 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				13A401AC26D32D61001FA799 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		13A401BE26D32DE5001FA799 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				13A401AA26D32D61001FA799 /* HomeViewController.swift */,
+				13A401C026D330DA001FA799 /* AccountViewController.swift */,
+				13A401C326D330F1001FA799 /* SettingsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		13A401BF26D32DEF001FA799 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +171,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A401B126D32D61001FA799 /* BWell.xcdatamodeld in Sources */,
-				13A401AB26D32D61001FA799 /* ViewController.swift in Sources */,
+				13A401C126D330DA001FA799 /* AccountViewController.swift in Sources */,
+				13A401AB26D32D61001FA799 /* HomeViewController.swift in Sources */,
 				13A401A726D32D61001FA799 /* AppDelegate.swift in Sources */,
 				13A401A926D32D61001FA799 /* SceneDelegate.swift in Sources */,
+				13A401C426D330F1001FA799 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
