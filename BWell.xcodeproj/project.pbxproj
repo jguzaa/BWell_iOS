@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,10 @@
 		13A401B626D32D62001FA799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A401B426D32D62001FA799 /* LaunchScreen.storyboard */; };
 		13A401C126D330DA001FA799 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401C026D330DA001FA799 /* AccountViewController.swift */; };
 		13A401C426D330F1001FA799 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401C326D330F1001FA799 /* SettingsViewController.swift */; };
+		13A401C626D39CEC001FA799 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401C526D39CEC001FA799 /* Habit.swift */; };
+		13A401C926D39DC4001FA799 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 13A401C826D39DC4001FA799 /* Realm */; };
+		13A401CB26D39DC4001FA799 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13A401CA26D39DC4001FA799 /* RealmSwift */; };
+		13A401CD26D39FEE001FA799 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401CC26D39FEE001FA799 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,8 @@
 		13A401B726D32D62001FA799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13A401C026D330DA001FA799 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		13A401C326D330F1001FA799 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		13A401C526D39CEC001FA799 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		13A401CC26D39FEE001FA799 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A401CB26D39DC4001FA799 /* RealmSwift in Frameworks */,
+				13A401C926D39DC4001FA799 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +72,7 @@
 			children = (
 				13A401A626D32D61001FA799 /* AppDelegate.swift */,
 				13A401A826D32D61001FA799 /* SceneDelegate.swift */,
+				13A401CC26D39FEE001FA799 /* Constants.swift */,
 				13A401BF26D32DEF001FA799 /* Models */,
 				13A401BD26D32DD9001FA799 /* View */,
 				13A401BE26D32DE5001FA799 /* Controllers */,
@@ -96,6 +105,7 @@
 		13A401BF26D32DEF001FA799 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				13A401C526D39CEC001FA799 /* Habit.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -116,6 +126,10 @@
 			dependencies = (
 			);
 			name = BWell;
+			packageProductDependencies = (
+				13A401C826D39DC4001FA799 /* Realm */,
+				13A401CA26D39DC4001FA799 /* RealmSwift */,
+			);
 			productName = BWell;
 			productReference = 13A401A326D32D61001FA799 /* BWell.app */;
 			productType = "com.apple.product-type.application";
@@ -143,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 13A4019A26D32D61001FA799;
+			packageReferences = (
+				13A401C726D39DC4001FA799 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 13A401A426D32D61001FA799 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,9 +190,11 @@
 				13A401B126D32D61001FA799 /* BWell.xcdatamodeld in Sources */,
 				13A401C126D330DA001FA799 /* AccountViewController.swift in Sources */,
 				13A401AB26D32D61001FA799 /* HomeViewController.swift in Sources */,
+				13A401C626D39CEC001FA799 /* Habit.swift in Sources */,
 				13A401A726D32D61001FA799 /* AppDelegate.swift in Sources */,
 				13A401A926D32D61001FA799 /* SceneDelegate.swift in Sources */,
 				13A401C426D330F1001FA799 /* SettingsViewController.swift in Sources */,
+				13A401CD26D39FEE001FA799 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +396,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		13A401C726D39DC4001FA799 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		13A401C826D39DC4001FA799 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13A401C726D39DC4001FA799 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		13A401CA26D39DC4001FA799 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13A401C726D39DC4001FA799 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		13A401AF26D32D61001FA799 /* BWell.xcdatamodeld */ = {
