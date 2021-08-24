@@ -66,85 +66,111 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vb4-YZ-ZNH">
-                                <rect key="frame" x="20" y="30" width="374" height="633"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyE-52-2et">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tD0-7z-AzA">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IUB-43-9Bi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="648"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="q5Z-u1-gsq">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="Aup-re-a9X"/>
-                                                </constraints>
-                                            </imageView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name your habit here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4c-Nk-H7X">
-                                                <rect key="frame" x="0.0" y="110" width="374" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="hQP-7f-zZe"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vb4-YZ-ZNH">
+                                                <rect key="frame" x="20" y="20" width="374" height="608"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tD0-7z-AzA">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="q5Z-u1-gsq">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="Aup-re-a9X"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name your habit here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4c-Nk-H7X">
+                                                                <rect key="frame" x="0.0" y="110" width="374" height="50"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="50" id="hQP-7f-zZe"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CyL-Qj-7mi">
+                                                        <rect key="frame" x="0.0" y="190" width="374" height="154"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your habit type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isq-KT-Tbr">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrR-vC-h5b">
+                                                                <rect key="frame" x="0.0" y="54" width="374" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="JGb-sj-Gr2"/>
+                                                                </constraints>
+                                                            </pickerView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-Dj-Zd5">
+                                                        <rect key="frame" x="0.0" y="374" width="374" height="154"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set the notification time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ga-WF-2Pm">
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="DrM-UE-m9e">
+                                                                <rect key="frame" x="0.0" y="54" width="374" height="100"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="100" id="9eI-mL-wnc"/>
+                                                                </constraints>
+                                                            </datePicker>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btZ-Fd-86B">
+                                                        <rect key="frame" x="0.0" y="558" width="374" height="50"/>
+                                                        <color key="backgroundColor" red="1" green="0.31225687270000002" blue="0.15020772809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="FTh-WD-z1F"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Add Habit"/>
+                                                        <connections>
+                                                            <action selector="addHabitPressed:" destination="OpB-Dy-guH" eventType="touchUpInside" id="MXn-Lc-R2B"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CyL-Qj-7mi">
-                                        <rect key="frame" x="0.0" y="190" width="374" height="154"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your habit type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isq-KT-Tbr">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrR-vC-h5b">
-                                                <rect key="frame" x="0.0" y="54" width="374" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="JGb-sj-Gr2"/>
-                                                </constraints>
-                                            </pickerView>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-Dj-Zd5">
-                                        <rect key="frame" x="0.0" y="374" width="374" height="154"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set the notification time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ga-WF-2Pm">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="DrM-UE-m9e">
-                                                <rect key="frame" x="0.0" y="54" width="374" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="9eI-mL-wnc"/>
-                                                </constraints>
-                                            </datePicker>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btZ-Fd-86B">
-                                        <rect key="frame" x="0.0" y="558" width="374" height="75"/>
-                                        <color key="backgroundColor" red="1" green="0.31225687270000002" blue="0.15020772809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="75" id="FTh-WD-z1F"/>
+                                            <constraint firstAttribute="trailing" secondItem="vb4-YZ-ZNH" secondAttribute="trailing" constant="20" id="KMP-sn-VxX"/>
+                                            <constraint firstItem="vb4-YZ-ZNH" firstAttribute="leading" secondItem="IUB-43-9Bi" secondAttribute="leading" constant="20" id="KcQ-M3-qJJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="vb4-YZ-ZNH" secondAttribute="bottom" constant="20" id="Oh5-TN-upb"/>
+                                            <constraint firstItem="vb4-YZ-ZNH" firstAttribute="top" secondItem="IUB-43-9Bi" secondAttribute="top" constant="20" id="xXV-HC-0np"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Add Habit"/>
-                                        <connections>
-                                            <action selector="addHabitPressed:" destination="OpB-Dy-guH" eventType="touchUpInside" id="MXn-Lc-R2B"/>
-                                        </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="IUB-43-9Bi" firstAttribute="top" secondItem="zyE-52-2et" secondAttribute="top" id="4nr-BW-coU"/>
+                                    <constraint firstItem="IUB-43-9Bi" firstAttribute="leading" secondItem="zyE-52-2et" secondAttribute="leading" id="E8I-SW-Y3w"/>
+                                    <constraint firstAttribute="trailing" secondItem="IUB-43-9Bi" secondAttribute="trailing" id="Rtz-gO-fce"/>
+                                    <constraint firstAttribute="bottom" secondItem="IUB-43-9Bi" secondAttribute="bottom" id="Yxl-gD-t1m"/>
+                                    <constraint firstItem="IUB-43-9Bi" firstAttribute="width" secondItem="zyE-52-2et" secondAttribute="width" id="s4B-Tz-0S5"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aTO-hA-Che"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="b9z-2K-lRe"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="em9-Ok-wY7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vb4-YZ-ZNH" firstAttribute="leading" secondItem="em9-Ok-wY7" secondAttribute="leading" constant="20" id="J22-yU-djc"/>
-                            <constraint firstItem="em9-Ok-wY7" firstAttribute="trailing" secondItem="vb4-YZ-ZNH" secondAttribute="trailing" constant="20" id="ocz-w0-TM8"/>
-                            <constraint firstItem="em9-Ok-wY7" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vb4-YZ-ZNH" secondAttribute="bottom" constant="20" id="qWJ-ah-aey"/>
-                            <constraint firstItem="vb4-YZ-ZNH" firstAttribute="top" secondItem="em9-Ok-wY7" secondAttribute="top" constant="30" id="zSa-EF-8DF"/>
+                            <constraint firstItem="zyE-52-2et" firstAttribute="trailing" secondItem="em9-Ok-wY7" secondAttribute="trailing" id="CK8-D1-Ooy"/>
+                            <constraint firstAttribute="bottom" secondItem="zyE-52-2et" secondAttribute="bottom" id="DkF-Xe-U91"/>
+                            <constraint firstItem="zyE-52-2et" firstAttribute="leading" secondItem="em9-Ok-wY7" secondAttribute="leading" id="Egj-HR-ubU"/>
+                            <constraint firstItem="zyE-52-2et" firstAttribute="top" secondItem="em9-Ok-wY7" secondAttribute="top" id="sJu-DW-uLA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GWx-M9-2wc"/>
@@ -156,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y9b-eH-trh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2114" y="2553"/>
+            <point key="canvasLocation" x="-2114.4927536231885" y="2552.0089285714284"/>
         </scene>
         <!--Second-->
         <scene sceneID="yMK-ud-f2U">

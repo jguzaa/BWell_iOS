@@ -34,7 +34,6 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func addHabitPressed(_ sender: UIBarButtonItem) {
-        //self.performSegue(withIdentifier: K.Segue.DashboardToCreateHabit, sender: self)
         self.present(habitCreateVC!, animated: true, completion: nil)
     }
     
@@ -67,7 +66,6 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 extension HomeViewController: TableViewManagement{
     
     func reloadWhenDismissed() {
-        print("Reload table")
         tableView.reloadData()
     }
        

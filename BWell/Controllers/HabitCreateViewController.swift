@@ -26,6 +26,14 @@ class HabitCreateViewController: UIViewController {
         // Do any additional setup after loading the view.
         habitTypePicker.dataSource = self
         habitTypePicker.delegate = self
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        habitNameTextField.text = ""
+        habitTypePicker.selectRow(0, inComponent: 0, animated: false)
+        timePicker.date = Date()
     }
     
     
@@ -33,12 +41,10 @@ class HabitCreateViewController: UIViewController {
         newHabit.name = habitNameTextField.text ?? ""
         newHabit.notificationTime = timePicker.date
         
-        //saveData()
+        saveData()
         
         self.dismiss(animated: true) {
-            
             self.delegate?.reloadWhenDismissed()
-            print("View is dismissed")
         }
                        
     }
