@@ -11,10 +11,16 @@ struct K {
     
     static let DashboardCell = "DashboardCell"
     
+    static let HabitTypes = [K.HabitType.DailyTracking, K.HabitType.AlarmClock, K.HabitType.Jogging]
+    
     struct HabitType {
-        static let DailyTracking = 0
-        static let AlarmClock = 1
-        static let Jogging = 2
+        static let DailyTracking = "Daily Tracking"
+        static let AlarmClock = "Alarm Clock"
+        static let Jogging = "Jogging"
+    }
+    
+    struct Segue {
+        static let DashboardToCreateHabit = "toCreateHabit"
     }
     
 }

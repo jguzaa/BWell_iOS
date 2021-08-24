@@ -14,12 +14,11 @@
 		13A401B126D32D61001FA799 /* BWell.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13A401AF26D32D61001FA799 /* BWell.xcdatamodeld */; };
 		13A401B326D32D62001FA799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A401B226D32D62001FA799 /* Assets.xcassets */; };
 		13A401B626D32D62001FA799 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A401B426D32D62001FA799 /* LaunchScreen.storyboard */; };
-		13A401C126D330DA001FA799 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401C026D330DA001FA799 /* AccountViewController.swift */; };
-		13A401C426D330F1001FA799 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401C326D330F1001FA799 /* SettingsViewController.swift */; };
 		13A401C626D39CEC001FA799 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401C526D39CEC001FA799 /* Habit.swift */; };
 		13A401C926D39DC4001FA799 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 13A401C826D39DC4001FA799 /* Realm */; };
 		13A401CB26D39DC4001FA799 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 13A401CA26D39DC4001FA799 /* RealmSwift */; };
 		13A401CD26D39FEE001FA799 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401CC26D39FEE001FA799 /* Constants.swift */; };
+		13A401CF26D3BDF7001FA799 /* HabitCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A401CE26D3BDF7001FA799 /* HabitCreateViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +31,9 @@
 		13A401B226D32D62001FA799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13A401B526D32D62001FA799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13A401B726D32D62001FA799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13A401C026D330DA001FA799 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		13A401C326D330F1001FA799 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		13A401C526D39CEC001FA799 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 		13A401CC26D39FEE001FA799 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		13A401CE26D3BDF7001FA799 /* HabitCreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCreateViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				13A401AA26D32D61001FA799 /* HomeViewController.swift */,
-				13A401C026D330DA001FA799 /* AccountViewController.swift */,
-				13A401C326D330F1001FA799 /* SettingsViewController.swift */,
+				13A401CE26D3BDF7001FA799 /* HabitCreateViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,12 +185,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A401B126D32D61001FA799 /* BWell.xcdatamodeld in Sources */,
-				13A401C126D330DA001FA799 /* AccountViewController.swift in Sources */,
 				13A401AB26D32D61001FA799 /* HomeViewController.swift in Sources */,
+				13A401CF26D3BDF7001FA799 /* HabitCreateViewController.swift in Sources */,
 				13A401C626D39CEC001FA799 /* Habit.swift in Sources */,
 				13A401A726D32D61001FA799 /* AppDelegate.swift in Sources */,
 				13A401A926D32D61001FA799 /* SceneDelegate.swift in Sources */,
-				13A401C426D330F1001FA799 /* SettingsViewController.swift in Sources */,
 				13A401CD26D39FEE001FA799 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -45,17 +45,118 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gzc-Ki-a3F">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="addBtnPressed:" destination="hAD-wz-VX4" id="ROs-tA-x3e"/>
+                                <action selector="addHabitPressed:" destination="hAD-wz-VX4" id="YGu-Uo-ivG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="mVb-4D-43z" id="3EC-SQ-3Hn"/>
+                        <segue destination="OpB-Dy-guH" kind="presentation" identifier="toCreateHabit" id="2f0-D4-UdB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rUQ-Lx-AzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2114.4927536231885" y="1845.5357142857142"/>
+        </scene>
+        <!--Habit Create View Controller-->
+        <scene sceneID="3Lc-q3-qK5">
+            <objects>
+                <viewController storyboardIdentifier="HabitCreate" id="OpB-Dy-guH" customClass="HabitCreateViewController" customModule="BWell" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rri-9f-Jqd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vb4-YZ-ZNH">
+                                <rect key="frame" x="20" y="30" width="374" height="633"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tD0-7z-AzA">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="160"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add" translatesAutoresizingMaskIntoConstraints="NO" id="q5Z-u1-gsq">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="Aup-re-a9X"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name your habit here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J4c-Nk-H7X">
+                                                <rect key="frame" x="0.0" y="110" width="374" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="hQP-7f-zZe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CyL-Qj-7mi">
+                                        <rect key="frame" x="0.0" y="190" width="374" height="154"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your habit type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isq-KT-Tbr">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xrR-vC-h5b">
+                                                <rect key="frame" x="0.0" y="54" width="374" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="JGb-sj-Gr2"/>
+                                                </constraints>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bJx-Dj-Zd5">
+                                        <rect key="frame" x="0.0" y="374" width="374" height="154"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set the notification time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ga-WF-2Pm">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="DrM-UE-m9e">
+                                                <rect key="frame" x="0.0" y="54" width="374" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="9eI-mL-wnc"/>
+                                                </constraints>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btZ-Fd-86B">
+                                        <rect key="frame" x="0.0" y="558" width="374" height="75"/>
+                                        <color key="backgroundColor" red="1" green="0.31225687270000002" blue="0.15020772809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="FTh-WD-z1F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Add Habit"/>
+                                        <connections>
+                                            <action selector="addHabitPressed:" destination="OpB-Dy-guH" eventType="touchUpInside" id="MXn-Lc-R2B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="em9-Ok-wY7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vb4-YZ-ZNH" firstAttribute="leading" secondItem="em9-Ok-wY7" secondAttribute="leading" constant="20" id="J22-yU-djc"/>
+                            <constraint firstItem="em9-Ok-wY7" firstAttribute="trailing" secondItem="vb4-YZ-ZNH" secondAttribute="trailing" constant="20" id="ocz-w0-TM8"/>
+                            <constraint firstItem="em9-Ok-wY7" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vb4-YZ-ZNH" secondAttribute="bottom" constant="20" id="qWJ-ah-aey"/>
+                            <constraint firstItem="vb4-YZ-ZNH" firstAttribute="top" secondItem="em9-Ok-wY7" secondAttribute="top" constant="30" id="zSa-EF-8DF"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GWx-M9-2wc"/>
+                    <connections>
+                        <outlet property="habitNameTextField" destination="J4c-Nk-H7X" id="1rh-Np-ug7"/>
+                        <outlet property="habitTypePicker" destination="xrR-vC-h5b" id="q61-L8-wNF"/>
+                        <outlet property="timePicker" destination="DrM-UE-m9e" id="htO-ZU-5zM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y9b-eH-trh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2114" y="2553"/>
         </scene>
         <!--Second-->
         <scene sceneID="yMK-ud-f2U">
@@ -169,6 +270,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="add" width="186" height="192"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="house.circle" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>

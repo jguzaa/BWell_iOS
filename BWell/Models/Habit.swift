@@ -17,10 +17,6 @@ class Habit: Object {
     @objc dynamic var isSnoozed: Bool = false
     @objc dynamic var lastDayFinished: Date?
     @objc dynamic var finishPercentage: Int = 0
-    @objc dynamic var habitType: Int = 0
+    @objc dynamic var habitType: String = K.HabitType.DailyTracking
     
-    convenience init(name: String) {
-        self.init()
-        self.name = name
-    }
 }
